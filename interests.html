@@ -213,7 +213,7 @@
 
         const markers = locations.map(function(location, i) {
             return new google.map.Marker({
-                position: location, 
+                position: locations, 
                 label: labels[i % labels.length]
             })
         });
