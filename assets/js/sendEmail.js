@@ -2,7 +2,7 @@ function sendMail(contactForm) {
     emailjs.send("service_ef80tkf","rosie", {
         "from_name": contactForm.name.value, 
         "from_email": contactForm.emailaddress.value,
-        "project_request": contactForm.projectsummary.value
+        "message": contactForm.projectsummary.value
     }) 
     .then(
         function(response) {
