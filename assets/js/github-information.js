@@ -15,6 +15,18 @@ function userInformationHTML(user) {
         </div>`;
 }
 
+function repoInformationHTML(repos) {
+    if (repos.length == 0) {
+        return `<div class="clearfix repo-list">No repos!</div>`
+    }
+
+    let listItemsHTML = repos.map(function(repo) {
+        return `<li>
+                    <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+                </li>`
+    })
+}
+
 function fetchGitHubInformation(event) {
 
     var username = $("#gh-username").val();
