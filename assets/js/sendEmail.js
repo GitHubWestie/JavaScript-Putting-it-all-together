@@ -9,7 +9,8 @@ function sendMail(contactForm) {
             console.log("SUCCESS", response);
         },
         function(error) {
-            consolelog("FAILED", error);
-        });
-        return false;
+            console.log("FAILED", error);
+        }
+    );
+    return false;
 }
